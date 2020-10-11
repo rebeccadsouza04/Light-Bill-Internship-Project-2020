@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Spring Boot Thymeleaf Hello World Example</title>
+	<style>
+	table {
+	  font-family: arial, sans-serif;
+	  border-collapse: collapse;
+	  width: 100%;
+	}
+	
+	td, th {
+	  border: 1px solid #dddddd;
+	  text-align: left;
+	  padding: 8px;
+	}
+	
+	tr:nth-child(even) {
+	  background-color: #dddddd;
+	}
+	</style>
+</head>
+
+<body>
+
+    <h1>You Electricity Bill details:</h1>
+    <hr>
+    <br><br>
+    <table>
+    <tr>
+	    <th>Name</th>
+	    <th>Amount</th>
+	    <th>Date</th>
+	    <th>Bill No</th>
+    </tr>
+    <tr>
+	    <td th:text="${bill.name}"></td>
+	    <td th:text="${bill.billAmount}"></td>
+	    <td th:text="${bill.date}"></td>
+	    <td th:text="${bill.billNo}"></td>
+ 	</tr>
+    </table>
+        
+    
+</body>
+</html>
